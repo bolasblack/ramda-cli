@@ -1,10 +1,13 @@
 {
   "name": "ramda-cli",
   "version": "0.0.1",
-  "description": "Process stdout string with ramda",
+  "description": "Process stdin with ramda",
   "main": "index.js",
   "author": "c4605 <bolasblack@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "ramda": "./cli.js"
+  },
   "dependencies": {
     "ramda": "^0.22.1"
   },
