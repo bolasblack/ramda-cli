@@ -38,7 +38,7 @@ module.exports = (userScript, userDataStr) => {
   }
 
   const vmlizedScript = new vm.Script('result = ' + userScript)
-  const sandbox = {R, data: userData}
+  const sandbox = R.merge({data: userData}, R)
 
   try {
     vmlizedScript.runInNewContext(sandbox)
