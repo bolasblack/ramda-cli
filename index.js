@@ -1,9 +1,10 @@
 const vm = require('vm')
 const R = require('ramda')
+const RX = require('ramda-extra').default
 
 module.exports = (userScript, userData) => {
   const vmlizedScript = new vm.Script('result = ' + userScript)
-  const sandbox = R.merge({data: userData}, R)
+  const sandbox = R.mergeAll([R, R.omit(['default', 'call'], RX), {data: userData}])
 
   try {
     vmlizedScript.runInNewContext(sandbox)

@@ -9,7 +9,8 @@
     "ramda": "./cli.js"
   },
   "dependencies": {
-    "ramda": "^0.22.1"
+    "ramda": "^0.22.1",
+    "ramda-extra": "bolasblack/ramda-extra#0.0.2"
   },
   "devDependencies": {}
 }
